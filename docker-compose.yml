@@ -40,7 +40,7 @@ services:
     volumes:
       - "./data/ch3:/var/lib/clickhouse"
       - "./configs/ch3:/etc/clickhouse-server/"
-  ch3:
+  ch4:
     build:
       context: .
       dockerfile: Dockerfile.chserver

@@ -2,7 +2,7 @@
 
 
 ### Usage
-1. Clone this resp
+1. Clone this respo
 2. Run bash command:
 
 ``` bash
@@ -10,7 +10,7 @@ cd docker-clickhouse
 docker-compose up
 ```
 
-3.Cluster have runnig in port:
+3.The cluster have runnig in port:
 
 ```Host: 127.0.0.1``` 
 
@@ -20,7 +20,7 @@ docker-compose up
 
 ### Cluster Config
 
-Cluster have 4 node , include 2 shard and 2 replica 。
+The cluster has 4 nodes, including 2 shards and 2 replicas。
 
 ```xml
         <ua_cluster>

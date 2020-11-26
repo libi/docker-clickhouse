@@ -1,0 +1,54 @@
+version: '2'
+services:
+  zookeeper:
+    image: zookeeper
+    ports:
+      - 2181:2181
+  ch1:
+    build:
+      context: .
+      dockerfile: Dockerfile.chserver
+    depends_on:
+      - zookeeper
+    ports:
+      - 8811:8123
+      - 9011:9000
+    volumes:
+      - "./data/ch1:/var/lib/clickhouse"
+      - "./configs/ch1:/etc/clickhouse-server/"
+  ch2:
+    build:
+      context: .
+      dockerfile: Dockerfile.chserver
+    depends_on:
+      - zookeeper
+    ports:
+      - 8812:8123
+      - 9012:9000
+    volumes:
+      - "./data/ch2:/var/lib/clickhouse"
+      - "./configs/ch2:/etc/clickhouse-server/"
+  ch3:
+    build:
+      context: .
+      dockerfile: Dockerfile.chserver
+    depends_on:
+      - zookeeper
+    ports:
+      - 8813:8123
+      - 9013:9000
+    volumes:
+      - "./data/ch3:/var/lib/clickhouse"
+      - "./configs/ch3:/etc/clickhouse-server/"
+  ch3:
+    build:
+      context: .
+      dockerfile: Dockerfile.chserver
+    depends_on:
+      - zookeeper
+    ports:
+      - 8814:8124
+      - 9014:9000
+    volumes:
+      - "./data/ch4:/var/lib/clickhouse"
+      - "./configs/ch4:/etc/clickhouse-server/"

@@ -47,7 +47,7 @@ services:
     depends_on:
       - zookeeper
     ports:
-      - 8814:8124
+      - 8814:8123
       - 9014:9000
     volumes:
       - "./data/ch4:/var/lib/clickhouse"

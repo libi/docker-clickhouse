@@ -1,4 +1,4 @@
-# Clickhouse cluster and WebUI on Docker
+# Clickhouse cluster and webUI on Docker
 
 
 ### Usage

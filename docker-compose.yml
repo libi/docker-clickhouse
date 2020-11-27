@@ -52,3 +52,12 @@ services:
     volumes:
       - "./data/ch4:/var/lib/clickhouse"
       - "./configs/ch4:/etc/clickhouse-server/"
+  tabix:
+    image: "spoonest/clickhouse-tabix-web-client"
+    ports:
+      - 8815:80
+    environment:
+      CH_NAME: ch1
+      CH_HOST: ch1:8123 
+
+
